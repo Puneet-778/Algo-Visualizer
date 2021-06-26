@@ -17,6 +17,7 @@ allPages.forEach(function(el){
 })
 
 allPages[1].addEventListener('click',function(){
+    localStorage.setItem('selectedAlgo','bfs');
     location.assign('grid.html');
 })
 
