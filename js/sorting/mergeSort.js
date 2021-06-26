@@ -10,11 +10,6 @@ function wait(time) {
 
 async function merge(arr, l, m, r) {
 
-  bars[l].style.backgroundColor = `tomato`;
-  bars[r].style.backgroundColor = `tomato`;
-
-  // await wait(500);
-
   let leftarr = [];
   let rightarr = [];
 
@@ -47,32 +42,80 @@ async function merge(arr, l, m, r) {
   //  placing sorted elements in main array
   while (idx1 < n1 && idx2 < n2) {
     if (leftarr[idx1] < rightarr[idx2]) {
+     
+      bars[idx1 + l].style.backgroundColor = `tomato`;
+      bars[idx2 + m + 1].style.backgroundColor = `tomato`;
+
+      await wait(intervalSpeed/2);
+
+      bars[idx1 + l].style.backgroundColor = `#60a3bc`;
+      bars[idx2 + m + 1].style.backgroundColor = `#60a3bc`;
+
       arr[idx3] = leftarr[idx1];
+
+      // bars[idx3].style.height = `${arr[idx3]}%`;
+
       idx1++;
       idx3++;
+
     } else {
+
+      bars[idx1 + l].style.backgroundColor = `tomato`;
+      bars[idx2 + m + 1].style.backgroundColor = `tomato`;
+
+      await wait(intervalSpeed/2);
+
+      bars[idx1 + l].style.backgroundColor = `#60a3bc`;
+      bars[idx2 + m + 1].style.backgroundColor = `#60a3bc`;
+
       arr[idx3] = rightarr[idx2];
+      
+      // bars[idx3].style.height = `${arr[idx3]}%`;
+
       idx2++;
       idx3++;
     }
   }
 
   while (idx1 < n1) {
+    bars[idx1 + l].style.backgroundColor = `tomato`;
+    // bars[idx2+m+1].style.backgroundColor = `tomato`;
+
+    await wait(intervalSpeed/2);
+
+    bars[idx1 + l].style.backgroundColor = `#60a3bc`;
+    // bars[idx2 + m + 1].style.backgroundColor = `#60a3bc`;
+
     arr[idx3] = leftarr[idx1];
+
+    // bars[idx3].style.height = `${arr[idx3]}%`;
+
     idx1++;
     idx3++;
   }
 
   while (idx2 < n2) {
+    bars[idx1 + l].style.backgroundColor = `tomato`;
+    // bars[idx2 + m + 1].style.backgroundColor = `tomato`;
+
+    await wait(intervalSpeed/2);
+
+    bars[idx1 + l].style.backgroundColor = `#60a3bc`;
+    // bars[idx2 + m + 1].style.backgroundColor = `#60a3bc`;
+
     arr[idx3] = rightarr[idx2];
+
+    // bars[idx3].style.height = `${arr[idx3]}%`;
+
     idx2++;
     idx3++;
   }
 
-  // await wait(500);
+  // await wait(200);
 
   for (let i = l; i <= r; i++) {
-    await wait(200);
+    bars[i].style.backgroundColor = `violet`;
+    await wait(intervalSpeed/2);
     bars[i].style.height = `${arr[i]}%`;
     bars[i].style.backgroundColor = `#60a3bc`;
   }
