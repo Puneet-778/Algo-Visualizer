@@ -15,7 +15,7 @@ async function bubbleSort(arr) {
       let promise = new Promise(function (resolve, reject) {
         setTimeout(function () {
           resolve();
-        }, 500);
+        }, intervalSpeed/2);
       });
 
       await promise;
