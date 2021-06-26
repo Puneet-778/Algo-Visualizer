@@ -33,7 +33,7 @@ async function selectionSort(arr){
                 minidx = j;
             }
 
-            await wait(250);
+            await wait(intervalSpeed);
 
             // clear comparision color
             bars[j].style.backgroundColor=`rgb(56, 201, 152)`;
@@ -49,7 +49,7 @@ async function selectionSort(arr){
            swap(i,minidx,arr);
            
         // waiting
-           await wait(500);
+           await wait(2*intervalSpeed);
 
         // swaping heights to display on UI
            bars[i].style.height=`${arr[i]}%`;
@@ -59,7 +59,7 @@ async function selectionSort(arr){
 
         // sorted element marked blue
         bars[i].style.backgroundColor=`#60a3bc`;
-        await wait(250);
+        await wait(intervalSpeed);
     }
     // last element marked sorted
     bars[arr.length-1].style.backgroundColor=`#60a3bc`;
