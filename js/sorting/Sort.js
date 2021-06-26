@@ -17,7 +17,7 @@ allPages.forEach(function(el){
 })
 
 allPages[1].addEventListener('click',function(){
-    location.assign('index.html/grid.html');
+    location.assign('grid.html');
 })
 
 // let stop = false;
