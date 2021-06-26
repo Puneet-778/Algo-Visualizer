@@ -32,7 +32,7 @@ async function partition(arr, pivot, lo, hi) {
     // show comparision-------------------
   bars[i].style.backgroundColor = "tomato";
 //   bars[j].style.backgroundColor = "tomato";
-  await wait(300);
+  await wait(intervalSpeed);
   bars[i].style.backgroundColor = "rgb(56, 201, 152)";
  
     // ------------------------------------
@@ -42,7 +42,7 @@ async function partition(arr, pivot, lo, hi) {
 
       swapQ(arr, i, j);
       // change height--------------------
-      await wait(200);
+      await wait(intervalSpeed/2);
 
       bars[i].style.height = `${arr[i]}%`;
       bars[j].style.height = `${arr[j]}%`;
