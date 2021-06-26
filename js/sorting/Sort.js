@@ -8,6 +8,20 @@ let stopBtn = document.querySelector('#stop-btn');
 let selectedNavItem = document.querySelector('.list-item.selected');
 let allPages = document.querySelectorAll('.page-nav-item');
 
+function setSpeed(speed = 3){
+    if(speed == 5){
+        return 20;
+    }else if(speed == 4){
+        return 100;
+    }else if(speed == 3){
+        return 150;
+    }else if( speed == 2){
+        return 400;
+    }else if(speed == 1){
+        return 600;
+    }
+}
+
 allPages.forEach(function(el){
     if(el.getAttribute('id') == 'sorting-page'){
         el.classList.add('selected');
@@ -124,8 +138,18 @@ function enableUI(){
 
 // --------------------------------------Sort-btn is clicked----------------------------------------
 // ----------------------------------------------------------------------------------------------
+
+let intervalSpeed;
 sortBtn.addEventListener("click", function () {
     lockUI();
+    let speedElement = document.querySelector("#speed");
+
+    let speed = speedElement.value;
+
+    intervalSpeed = setSpeed(speed);
+    // console.log(speed)
+    // console.log(intervalSpeed)
+
     if (selectedAlgo == "bubble-sort") {
       bubbleSort(arr).then(function(){
           enableUI();
