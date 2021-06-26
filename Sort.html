@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="main-sort-container">
-        <div id="particles-js" class="navbar">
+        <div class="navbar">
             <div class="nav-item" id="home">
                 <img src="icons/home-logo.png" alt="">
             </div>
@@ -39,13 +39,19 @@
                         <div class="list-item" id="quick-sort">Quick Sort</div>
                         <div class="list-item" id="insertion-sort">Insertion Sort</div>
                     </div>
-                    <div class="complexity">
-
-                    </div>
                 </div>
-                <div class="controls">
+                <div class="sort-controls">
                     <div class="input-field">
-                        <input class="input-arr-size" value="" type="number">
+                        <div>
+                            <div>
+                                <div style="color:rgb(56, 201, 152)">Input Size</div>
+                                <input class="input-arr-size" placeholder="size" value="" type="number"  min="1" max="1000">
+                            </div>
+                            <div>
+                                <div style="color:rgb(56, 201, 152)">Speed</div>
+                                <input id="speed" class="input-arr-size" placeholder="Interval" min="1" max="5" value="1" type="number">
+                            </div>
+                        </div>
                         <button id="generate-arr-btn">Generate Array</button>
                     </div>
                     <div class="sort-stop-btn">
