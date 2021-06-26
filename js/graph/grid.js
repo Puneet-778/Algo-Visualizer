@@ -12,7 +12,7 @@ allPages.forEach(function(el){
 })
 
 allPages[0].addEventListener('click',function(){
-    location.assign('/sort.html');
+    location.assign('sort.html');
 })
 
 
