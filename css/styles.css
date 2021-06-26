@@ -334,31 +334,48 @@
     /* width: calc((100%) / 9); */
     border: 0.05px solid rgba(1, 117, 78, 0.527);
     background-color:rgb(56, 201, 152);
-    transition: all 0.5s;
+    transition: all 0.2ms linear;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 .algo-info{
-    height: 75%;
+    height: 60%;
     width: 100%;
 }
-.controls{
+.sort-controls{
     height:40%;
     width: 100%;
 }
+.graph-controls{
+    height: 40%;
+}
+.graph-controls .sort-stop-btn{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
 .input-field{
-    height: 20%;
+    height: 50%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
+.input-field div{
+    display: flex;
+}
+.input-field div div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:0.3rem;
+}
 .input-arr-size{
     outline: none;
-    height: 2rem;
-    width: 9rem;
-    border: 2px solid #2d75b1;
+    height: 1.8rem;
+    width: 6.5rem;
     padding: 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
 }
 
 #generate-arr-btn, #sort-btn, #stop-btn, #visualize-btn, #reset-btn{
