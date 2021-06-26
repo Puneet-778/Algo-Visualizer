@@ -87,9 +87,9 @@ for(let i = 0 ; i < cardBtns.length; i++){
         localStorage.setItem('selectedAlgo',selectedAlgo);
 
         if(i < 5)
-           window.location.assign(`/Sort.html`);
+           window.location.assign(`Sort.html`);
         else{
-           window.location.assign(`/grid.html`);
+           window.location.assign(`grid.html`);
         }
     })
 }
