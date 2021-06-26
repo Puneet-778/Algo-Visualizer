@@ -24,7 +24,7 @@ async function insertionSort(arr){
             arr[ptr] = arr[j];
             arr[j] = temp;
 
-            await wait(500);
+            await wait(intervalSpeed);
             bars[ptr].style.height = `${arr[ptr]}%`;
             bars[j].style.height = `${arr[j]}%`;
 
@@ -39,7 +39,7 @@ async function insertionSort(arr){
             j--;
 
         }
-        await wait(500);
+        await wait(intervalSpeed);
         // sorted element
          bars[i].style.backgroundColor = `#60a3bc`;
          bars[ptr].style.backgroundColor = "#60a3bc";
