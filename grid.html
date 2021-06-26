@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Algorithms</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="main-sort-container">
+        <div class="navbar">
+            <div class="nav-item" id="home">
+                <img src="/icons/home-logo.png" alt="">
+            </div>
+            <div class="page-navigation">
+                <div class="page-nav-item" id="sorting-page">Sorting Algos</div>
+                <div class="page-nav-item" id="graph-page">Graph Algos</div>
+            </div>
+        </div>
+        <div class="visual-container">
+            <div class="left-container">
+                <div class="legends">
+                    <div ><div id="source"></div> &nbsp Source</div>
+                    <div ><div id="destination"></div>  &nbsp Destination</div>
+                    <div ><div id="visited"></div> &nbsp Visited</div>
+                    <div ><div id="route"></div> &nbsp Route</div>
+                    <div ><div id="obstacle"></div> &nbsp Obstacle</div>
+                </div>
+                <div class="grid-container">
+                    <!-- <div class="row">
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="algo-info">
+                    <div class="options">
+                        <div class="list-item selected" id="bfs">Breadth First Search</div>
+                        <div class="list-item" id="dfs">Depth First Search</div>
+                        <div class="list-item" id="quick">Maze Runner</div>
+                    </div>
+                    <div class="complexity"></div>
+                </div>
+                <div class="controls">
+                    <div class="sort-stop-btn">
+                        <button id="visualize-btn">Visualize</button>
+                        <button id="reset-btn">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src = "/js/graph/grid.js"></script>
+<script src = "/js/graph/GridBFS.js"></script>
+<script src = "/js/graph/GridDFS.js"></script>
+<script src = "/js/linking.js"></script>
+</html>

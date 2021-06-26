@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting ALgorithms</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="main-sort-container">
+        <div id="particles-js" class="navbar">
+            <div class="nav-item" id="home">
+                <img src="/icons/home-logo.png" alt="">
+            </div>
+            <div class="page-navigation">
+                <div class="page-nav-item selected" id="sorting-page">Sorting Algos</div>
+                <div class="page-nav-item" id="graph-page">Graph Algos</div>
+            </div>     
+        </div>
+        <div class="visual-container">
+            <div class="left-container">
+                <div class="legends">
+                    <div><div  style="background-color: rgb(56, 201, 152);"></div> &nbsp Unsorted</div>
+                    <div ><div style="background-color: #60a3bc;"></div>  &nbsp Sorted</div>
+                    <div ><div style="background-color: tomato;"></div> &nbsp Comparing</div>
+                    <div ><div style="background-color: blue;"></div> &nbsp Pivot/Insert</div>
+                </div>
+                <div class="graph-container">
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="algo-info">
+                    <div class="options">
+                        <div class="list-item selected" id="bubble-sort">Bubble Sort</div>
+                        <div class="list-item" id="selection-sort">Selection Sort</div>
+                        <div class="list-item" id="merge-sort">Merge Sort</div>
+                        <div class="list-item" id="quick-sort">Quick Sort</div>
+                        <div class="list-item" id="insertion-sort">Insertion Sort</div>
+                    </div>
+                    <div class="complexity">
+
+                    </div>
+                </div>
+                <div class="controls">
+                    <div class="input-field">
+                        <input class="input-arr-size" value="" type="number">
+                        <button id="generate-arr-btn">Generate Array</button>
+                    </div>
+                    <div class="sort-stop-btn">
+                        <button id="sort-btn">Sort</button>
+                        <button id="stop-btn">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+<!-- ---------------------------------script------------------------------------------ -->
+    <script src ="/js/sorting/Sort.js"></script>
+    <script src ="/js/sorting/SelectionSort.js"></script>
+    <script src ="/js/sorting/BubbleSort.js"></script>
+    <script src ="/js/sorting/mergeSort.js"></script>
+    <script src ="/js/sorting/QuickSort.js"></script>
+    <script src = "/js/sorting/InsertionSort.js"></script>
+    <script src ="/js/linking.js"></script>
+<!-- ---------------------------------script------------------------------------------ -->
+
+</body>
+</html>
