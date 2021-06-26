@@ -12,6 +12,7 @@ allPages.forEach(function(el){
 })
 
 allPages[0].addEventListener('click',function(){
+    localStorage.setItem('selectedAlgo','bubble-sort');
     location.assign('Sort.html');
 })
 
