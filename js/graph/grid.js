@@ -84,8 +84,7 @@ function init(){
         for(let j = 0; j < 20; j++){
             if(graph[i][j] == -1){
                 // obstacle
-                document.querySelector(`#row-${i}-col-${j}`).style.backgroundColor = "transparent";
-                
+                 document.querySelector(`#row-${i}-col-${j}`).classList.remove('blocked');
             }else if(graph[i][j] == 1){
                 // source
                  if( document.querySelector(`#row-${i}-col-${j}`).classList.contains('source-selected') == true){
