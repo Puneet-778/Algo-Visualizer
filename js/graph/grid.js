@@ -113,6 +113,8 @@ function init(){
                 document.querySelector(`#row-${i}-col-${j}`).classList.remove('target-selected');
             }
             graph[i][j] = 0;
+            // clear weights
+            document.querySelector(`#row-${i}-col-${j}`).innerText = "";
        } 
       }
     
