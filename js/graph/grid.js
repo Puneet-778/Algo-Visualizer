@@ -38,6 +38,21 @@ for(let i = 0; i < 20;i++){
     grid.appendChild(row);
 }
 
+// --------creates weighted graph---------------------------
+// -----------------------------------------------------------
+function createWeightedGraph(graph) {
+  for (let i = 0; i < graph.length; i++) {
+    for (let j = 0; j < graph[0].length; j++) {
+      if (i == srcRow && j == srcCol) {
+        document.querySelector(`#row-${i}-col-${j}`).innerText = 0;
+      } else {
+        let randomWeight = Math.floor(Math.random() * 100 + 1);
+        document.querySelector(`#row-${i}-col-${j}`).innerText = randomWeight;
+      }
+    }
+  }
+}
+
 
 // ---------waiting function-------------------------------
 function wait(time){
@@ -214,20 +229,26 @@ for(let i = 0; i < graph.length * graph[0].length; i++){
 
            newdestRow = parseInt(idArr[1]);
            newdestCol = parseInt(idArr[3]);
+            
+            
+          if (graph[newdestRow][newdestCol] == 0) {
+              graph[destRow][destCol] = 0;
+              setDestination(newdestRow, newdestCol);
+            }
 
            
-           if(destRow == newdestRow && destCol == newdestCol){
-            //    do nothing
-            //    console.log(newdestRow, newdestCol);
-            //    console.log(destRow, destCol);
-            //    console.log('hello');
-           }else{
-            //    console.log(destRow, destCol)
-            if(graph[newdestCol][newdestCol] == 0){
-                graph[destRow][destCol] = 0;
-               setDestination(newdestRow, newdestCol);
-            }
-           }
+//            if(destRow == newdestRow && destCol == newdestCol){
+//             //    do nothing
+//             //    console.log(newdestRow, newdestCol);
+//             //    console.log(destRow, destCol);
+//             //    console.log('hello');
+//            }else{
+//             //    console.log(destRow, destCol)
+//             if(graph[newdestCol][newdestCol] == 0){
+//                 graph[destRow][destCol] = 0;
+//                setDestination(newdestRow, newdestCol);
+//             }
+//            }
 
            console.log(graph);
         }else if(selectingNow == 'block'){
@@ -279,6 +300,9 @@ listItems.forEach(function (el) {
     console.log(selectedAlgo);
     localStorage.setItem('selectedAlgo',selectedAlgo);
     init();
+    if (selectedAlgo == "dijikstra") {
+      createWeightedGraph(graph);
+    }
     console.log(graph);
   });
 });
@@ -293,8 +317,12 @@ gridVisualBtn.addEventListener("click", function () {
     } else if (selectedAlgo == "bfs") {
       bfs(graph, srcRow, srcCol).then(function(){
         enableUI();
-      });;
-    }
+      });
+    }else if (selectedAlgo == "dijikstra") {
+    dijikstra(graph, srcRow, srcCol).then(function () {
+      enableUI();
+    });
+  }
   });
 
 
