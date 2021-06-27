@@ -8,9 +8,11 @@ Algorithms visualised:
     e) Insertion Sort
 # 2) Graph Traversal (Path finding Algos) 
  #   Blind search algorithms such as breadth-first and depth-first exhaust all possibilities; starting from the given node, they iterate over all possible paths until they reach        the goal node. 
+ #   Dijikstra follows a greedy approach and is smart path finding algorithm
  
     a) Breadth First Search (BFS) 
     b) Depth First Search (DFS)
+    c) Dijikstra
 
 # Functionalities :  
     Sorting section:
