@@ -324,6 +324,7 @@
     padding:0;
     border-left: 1px solid rgb(105, 105, 105);
     border-top:1px solid rgb(49, 49, 49) ;
+    cursor:pointer;
 }
 
 /* height-bar */
