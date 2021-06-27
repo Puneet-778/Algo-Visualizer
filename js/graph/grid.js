@@ -123,35 +123,6 @@ let destCol;
 init();
 
 
-
-// let graph = [];
-// for(let i = 0;i < 20; i++){
-//     let temp = []
-//     for(let j = 0; j < 20; j++){
-//         temp[j] = 0;
-//     }
-//     graph.push(temp);
-// }
-
-// let srcRow = 0;
-// let srcCol = 0;
-
-// let destRow = graph.length - 1;
-// let destCol = graph[0].length - 1;
-
-
-// document.querySelector(`#row-${0}-col-${0}`).classList.add('source-selected')
-// document.querySelector(`#row-${graph.length-1}-col-${graph[0].length-1}`).classList.add('target-selected')
-
-
-// // ---------------------set default souce and target--------------------------
-// // ---------------------------------------------------------------------------
-// setSource(srcRow, srcCol);
-// setDestination(destRow, destCol)
-// // ---------------------------------------------------------------------------
-// // ---------------------------------------------------------------------------
-
-
 // source
 function setSource(r,c){
 
@@ -268,15 +239,23 @@ for(let i = 0; i < graph.length * graph[0].length; i++){
 
            let cell = document.querySelector(`#row-${blockRow}-col-${blockCol}`);
 
-           if(cell.classList.contains('blocked')){
-              graph[blockRow][blockCol] = 0;
-              document.querySelector(`#row-${blockRow}-col-${blockCol}`).classList.remove('blocked');
-           }else{
-              if(graph[blockRow][blockCol] == 0){
-                graph[blockRow][blockCol] = -1;
-                document.querySelector(`#row-${blockRow}-col-${blockCol}`).classList.add('blocked');
-              }
+           if(graph[blockRow][blockCol] == -1){
+               graph[blockRow][blockCol] = 0;
+              cell.classList.remove('blocked');
+           }else if(graph[blockRow][blockCol] == 0){
+               graph[blockRow][blockCol] = -1;
+               cell.classList.add('blocked');
            }
+
+//            if(cell.classList.contains('blocked')){
+//               graph[blockRow][blockCol] = 0;
+//               document.querySelector(`#row-${blockRow}-col-${blockCol}`).classList.remove('blocked');
+//            }else{
+//               if(graph[blockRow][blockCol] == 0){
+//                 graph[blockRow][blockCol] = -1;
+//                 document.querySelector(`#row-${blockRow}-col-${blockCol}`).classList.add('blocked');
+//               }
+//            }
            
         }
     })
