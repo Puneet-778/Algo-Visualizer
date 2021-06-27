@@ -335,7 +335,7 @@ gridVisualBtn.addEventListener("click", function () {
 
 function enableUI(){
     document.querySelector('.options').style.pointerEvents = 'auto';
-    document.querySelector('#sort-btn').classList.remove('disabled');
+    document.querySelector('.options').classList.remove('disabled');
 
     document.querySelector('#visualize-btn').style.pointerEvents = 'auto';
     document.querySelector('#visualize-btn').classList.remove('disabled');
