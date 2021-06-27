@@ -11,8 +11,6 @@ class Pair2{
 
 async function dijikstra(graph,srcRow, srcCol){
 
-// ------------weighted graph------------------------------
-// -----------------------------------------------------------
     let dir = [[-1,0],[0,-1],[1,0],[0,1]];
 
     let pq = [];
