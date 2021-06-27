@@ -52,7 +52,7 @@ async function dijikstra(graph,srcRow, srcCol){
             let r = selectedPair.r + dir[i][0];
             let c = selectedPair.c + dir[i][1];
 
-            if(r < 0 || c < 0 || r == graph.length || c == graph[0].length || graph[r][c] == 1){
+            if(r < 0 || c < 0 || r == graph.length || c == graph[0].length || graph[r][c] == 1 || graph[r][c] == -1){
                 continue;
             }
 
