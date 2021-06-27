@@ -18,7 +18,7 @@ Algorithms visualised:
     Sorting section:
     a) User can select any sorting algorithm and can see it's visualisation
     b) User can set any size of array from (1-1000) 
-    c) Also implemented speed options to increase/decrease visualization speed
+    c) Also implemented speed options(min:1 - max:5) to increase/decrease visualization speed.
 
 # Path Finding Section: 
     a) Implemented set source and destination which allows user to change starting and end point in the grid  
