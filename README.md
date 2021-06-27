@@ -10,20 +10,17 @@ Algorithms visualised:
  #   Blind search algorithms such as breadth-first and depth-first exhaust all possibilities; starting from the given node, they iterate over all possible paths until they reach        the goal node. 
  
     a) Breadth First Search (BFS) 
-    b)Depth First Search (DFS)
+    b) Depth First Search (DFS)
 
-# Functionalities : 
-
- Sorting section:
-  a) User can select any sorting algorithm and can see it's visualisation
-  b) User can set any size of array from (1-1000) 
-  c) Also implemented speed options to increase/decrease visualization speed
+# Functionalities :  
+    Sorting section:
+    a) User can select any sorting algorithm and can see it's visualisation
+    b) User can set any size of array from (1-1000) 
+    c) Also implemented speed options to increase/decrease visualization speed
 
 # Path Finding Section: 
-
-  a) Implemented set source and destination which allows user to change starting and end point in the grid  
-  b) Also included path blocking by adding obstacles in the grid
+    a) Implemented set source and destination which allows user to change starting and end point in the grid  
+    b) Also included path blocking by adding obstacles in the grid
 
 # Common : 
-
-   Disables UI while an algorithm is running and can only be stopped using reset button. 
+    Disables UI while an algorithm is running and can only be stopped using reset button. 
