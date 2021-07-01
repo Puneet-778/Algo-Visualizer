@@ -379,7 +379,7 @@
     border-radius: 0.8rem;
 }
 
-#generate-arr-btn, #sort-btn, #stop-btn, #visualize-btn, #reset-btn{
+#generate-arr-btn, #sort-btn, #stop-btn, #visualize-btn, #reset-btn, #clear-btn{
     color:rgb(56, 201, 152);
     font-weight: 500;
     height: 2rem;
@@ -390,7 +390,7 @@
     transition: transform 0.5s, background-color 0.2s ease-out, color 0.2s, font-size 0.2s ease-out;
     cursor: pointer;
 }
-#generate-arr-btn:hover, #sort-btn:hover, #stop-btn:hover, #visualize-btn:hover, #reset-btn:hover{
+#generate-arr-btn:hover, #sort-btn:hover, #stop-btn:hover, #visualize-btn:hover, #reset-btn:hover, #clear-btn:hover{
     background-color: rgba(56, 201, 153, 0.829);
     color:white;
 }
