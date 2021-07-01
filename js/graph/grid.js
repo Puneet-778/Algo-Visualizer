@@ -2,6 +2,12 @@ let grid = document.querySelector('.grid-container');
 let selectedNavItem = document.querySelector('.list-item.selected');
 let resetBtn = document.querySelector('#reset-btn');
 let allPages = document.querySelectorAll('.page-nav-item');
+let clearBtn = document.querySelector("#clear-btn");
+
+
+clearBtn.addEventListener('click', function(){
+  init();
+})
 
 allPages.forEach(function(el){
     if(el.getAttribute('id') == 'graph-page'){
@@ -114,7 +120,9 @@ function init(){
             }
             graph[i][j] = 0;
             // clear weights
-            document.querySelector(`#row-${i}-col-${j}`).innerText = "";
+            if (localStorage.getItem('selectedAlgo') != "dijikstra") {
+               document.querySelector(`#row-${i}-col-${j}`).innerText = "";
+            }
        } 
       }
     
@@ -336,9 +344,11 @@ gridVisualBtn.addEventListener("click", function () {
     document.querySelector('.options').style.pointerEvents = 'none';
     document.querySelector('.options').classList.add('disabled');
 
-
     document.querySelector('#visualize-btn').style.pointerEvents = 'none';
     document.querySelector('#visualize-btn').classList.add('disabled');
+      
+    clearBtn.style.pointerEvents = 'none';
+    clearBtn.classList.add('disabled');
 }
 
 function enableUI(){
@@ -347,6 +357,9 @@ function enableUI(){
 
     document.querySelector('#visualize-btn').style.pointerEvents = 'auto';
     document.querySelector('#visualize-btn').classList.remove('disabled');
+    
+    clearBtn.style.pointerEvents = 'auto';
+    clearBtn.classList.remove('disabled');
 }
 
 
